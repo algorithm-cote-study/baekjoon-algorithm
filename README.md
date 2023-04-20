@@ -1,6 +1,8 @@
-<h1 style="text-align: center"> <img src="https://img.icons8.com/color/48/null/code.png" width="30" height="30" style="padding: 0;margin-bottom:-5px;" /> 알고리즘까지 브론즈가 될 순 없어 </h1>  
+<div align="center">
+    <h1> <img src="https://img.icons8.com/color/48/null/code.png" width="30" height="30" style="padding: 0;margin-bottom:-5px;" /> 알고리즘까지 브론즈가 될 순 없어 </h1>
+</div>
 
-<div style="text-align: center">
+<div align="center">
 <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Falgorithm-cote-study%2Fbaekjoon-algorithm&count_bg=%23A9A7E3&title_bg=%23555555&icon=yarn.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 </div>
 
