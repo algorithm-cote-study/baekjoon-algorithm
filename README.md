@@ -19,6 +19,19 @@
 1. 패키지는 solved.ac의 class 분류대로 폴더를 생성했습니다. [바로가기](https://solved.ac/en/class) </br>
 2. class 별로 각자 이름 패키지 생성
 
+```
+.
+└── java
+    ├── class1  <- class1
+    │   └── seunggu
+    ├── class1p <- class1+
+    │   └── seunggu
+    ├── class1pp <- class1++
+    │   └── seunggu
+    ├── class2
+    │   └── seunggu
+```
+
 ## 파일 생성 기준
 
 파일은 Main + 문제번호로 생성해주세요. ex) Main1000.java
