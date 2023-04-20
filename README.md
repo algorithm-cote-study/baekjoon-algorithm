@@ -38,6 +38,11 @@
             <br />
             <a href="https://github.com/seunggulee1007">seunggulee1007</a>
         </td>
+        <td align="center" width="130px">
+            <a href="https://github.com/songjuAhn"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/18460680?v=4"/></a>
+            <br />
+            <a href="https://github.com/songjuAhn">songjuAhn</a>
+        </td>
     </tr>
     <tr height="50px">
         <td align="center">
@@ -54,6 +59,13 @@
             <br />
             <a href="https://solved.ac/profile/leesg107">solved.ac</a>
         </td>
+        <td align="center">
+            <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=ggb06104" />
+            <br />
+            <a href="https://www.acmicpc.net/user/ggb06104">Baekjoon</a>
+            <br />
+            <a href="https://solved.ac/profile/ggb06104">solved.ac</a>
+        </td>
     </tr>
     <tr height="20px">
         <td align="center">
@@ -61,6 +73,9 @@
         </td>
         <td align="center">
            목표 : 다이아
+        </td>
+        <td align="center">
+           목표 : 플래티넘
         </td>
     </tr>
 </table>
