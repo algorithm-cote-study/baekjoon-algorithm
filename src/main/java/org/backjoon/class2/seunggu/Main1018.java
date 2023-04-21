@@ -9,23 +9,27 @@ public class Main1018 {
 
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            StringTokenizer tokenizer = new StringTokenizer(reader.readLine(), " ");
-            int n = Integer.parseInt(tokenizer.nextToken());
-            int m = Integer.parseInt(tokenizer.nextToken());
-            String[][] array = new String[n][m];
-            for(int i=0; i<n;i++) {
-                array[i] = reader.readLine().split("");
-            }
-            int answer = Integer.MAX_VALUE;
-            for(int i=0; i <= n - 8; i++) {
-                for(int j=0; j<= m - 8; j++) {
-                    answer = Math.min(answer, getBoard(i, j, array));
-                }
-            }
-            System.out.println(answer);
+            solution(reader);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    static int solution(BufferedReader reader) throws IOException {
+        StringTokenizer tokenizer = new StringTokenizer(reader.readLine(), " ");
+        int n = Integer.parseInt(tokenizer.nextToken());
+        int m = Integer.parseInt(tokenizer.nextToken());
+        String[][] array = new String[n][m];
+        for(int i=0; i<n;i++) {
+            array[i] = reader.readLine().split("");
+        }
+        int answer = Integer.MAX_VALUE;
+        for(int i=0; i <= n - 8; i++) {
+            for(int j=0; j<= m - 8; j++) {
+                answer = Math.min(answer, getBoard(i, j, array));
+            }
+        }
+        return answer;
     }
 
     static int getBoard(int n, int m, String[][] array) {
