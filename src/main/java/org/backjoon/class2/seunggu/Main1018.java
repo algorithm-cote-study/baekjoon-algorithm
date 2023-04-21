@@ -1,4 +1,4 @@
-package main.java.class2.seunggu;
+package org.backjoon.class2.seunggu;
 
 import java.io.BufferedReader;
 import java.io.IOException;

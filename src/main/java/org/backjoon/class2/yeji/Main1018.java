@@ -1,4 +1,4 @@
-package main.java.class2.yeji;
+package org.backjoon.class2.yeji;
 
 import java.io.BufferedReader;
 import java.io.IOException;
