@@ -70,13 +70,15 @@ class Main1018Test {
 
 ## <img src="https://img.icons8.com/color/48/null/github--v1.png" width="30" height="30" style="padding: 0;margin-bottom:-5px;"/> Git commit convention
 
-- FEAT : 새로운 기능의 추가
-- FIX: 버그 수정
-- DOCS: 문서 수정 (README)
-- STYLE: 스타일 관련 기능(코드 포맷팅, 세미콜론 누락, 코드 자체의 변경이 없는 경우)
-- REFACTOR: 코드 리펙토링
-- TEST: 테스트 코트, 리펙토링 테스트 코드 추가
-- CHORE: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같은 경우)
+- feat : 새로운 기능의 추가
+- fix: 버그 수정
+- docs: 문서 수정 (README)
+- style: 스타일 관련 기능(코드 포맷팅, 세미콜론 누락, 코드 자체의 변경이 없는 경우)
+- refactor: 코드 리펙토링
+- test: 테스트 코트, 리펙토링 테스트 코드 추가
+- chore: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같은 경우)
+- remove : 파일을 삭제하는 작업만 수행한 경우
+- comment : 필요한 주석 추가 및 변경
 
 ## Contributors
 
