@@ -109,7 +109,7 @@ class Main1018Test {
             <a href="https://solved.ac/profile/goe152">solved.ac</a>
         </td>
         <td align="center">
-<!--             <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=leesg107" /> -->
+            <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=leesg107" />
             <br />
             <a href="https://www.acmicpc.net/user/leesg107">Baekjoon</a>
             <br />
