@@ -10,10 +10,8 @@ import java.util.List;
 // 소수구하기
 public class Main1929 {
 
-    private static boolean[] isPrime;
-
     public static void main ( String[] args ) {
-        try ( InputStreamReader in = new InputStreamReader( System.in ); BufferedReader br = new BufferedReader( in ); ) {
+        try ( InputStreamReader in = new InputStreamReader( System.in ); BufferedReader br = new BufferedReader( in ) ) {
 
             for ( int s : solution( br ) ) {
                 System.out.println( s );
@@ -27,7 +25,7 @@ public class Main1929 {
     static int[] solution ( BufferedReader br ) throws IOException {
         List<Integer> result = new ArrayList<>();
         int[] input = Arrays.stream( br.readLine().split( " " ) ).mapToInt( Integer::parseInt ).toArray();
-        isPrime = new boolean[input[1] + 1];
+        boolean[] isPrime = new boolean[input[1] + 1];
         isPrime[1] = true;
         for ( int i = 2; ( i * i ) <= input[1]; i++ ) {
             for ( int j = i * i; j <= input[1]; j += i ) {
