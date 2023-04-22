@@ -29,8 +29,7 @@ public class Main1929 {
         int[] input = Arrays.stream( br.readLine().split( " " ) ).mapToInt( Integer::parseInt ).toArray();
         isPrime = new boolean[input[1] + 1];
         isPrime[1] = true;
-        isPrime[2] = true;
-        for ( int i = 2; i * i <= input[1]; i++ ) {
+        for ( int i = 2; ( i * i ) <= input[1]; i++ ) {
             for ( int j = i * i; j <= input[1]; j += i ) {
                 isPrime[j] = true;
             }
