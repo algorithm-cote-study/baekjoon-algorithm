@@ -35,22 +35,24 @@ public class Main4949 {
     }
 
     private static boolean isCollectParentheses ( String[] input ) {
-
         Deque<String> stack = new ArrayDeque<>();
+        
         for ( String in : input ) {
-            if ( in.equals( "(" ) || in.equals( "[" ) ) {
-                stack.push( in );
-            } else if ( in.equals( "]" ) ) {
-                if ( !stack.isEmpty() && stack.peek().equals( "[" ) ) {
-                    stack.pop();
-                } else {
-                    stack.push( in );
+            switch ( in ) {
+                case "(", "[" -> stack.push( in );
+                case "]" -> {
+                    if ( !stack.isEmpty() && stack.peek().equals( "[" ) ) {
+                        stack.pop();
+                    } else {
+                        stack.push( in );
+                    }
                 }
-            } else if ( in.equals( ")" ) ) {
-                if ( !stack.isEmpty() && stack.peek().equals( "(" ) ) {
-                    stack.pop();
-                } else {
-                    stack.push( in );
+                case ")" -> {
+                    if ( !stack.isEmpty() && stack.peek().equals( "(" ) ) {
+                        stack.pop();
+                    } else {
+                        stack.push( in );
+                    }
                 }
             }
         }

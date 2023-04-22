@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 class Main4949Test {
 
     @Test
-    @DisplayName( "귢형잡힌 세상 테스트1" )
+    @DisplayName( "균형잡힌 세상 테스트1" )
     void test_case_1 () throws IOException {
         // given
         String compare = "yes" + "\n" + "yes" + "\n" + "no" + "\n" + "no" + "\n" + "no" + "\n" + "yes" + "\n" + "yes" + "\n";
