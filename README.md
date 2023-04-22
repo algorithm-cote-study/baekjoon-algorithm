@@ -129,6 +129,7 @@ class Main1018Test {
         </td>
         <td align="center">
            목표 : 다이아
+           
         </td>
         <td align="center">
            목표 : 플래티넘
