@@ -7,7 +7,7 @@ import org.backjoon.common.TestFileUtil;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@DisplayName("토마토")
+@DisplayName("토마토 - 승구")
 class Main7576Test {
 
     @Test
