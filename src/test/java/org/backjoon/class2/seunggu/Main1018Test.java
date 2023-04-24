@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 @DisplayName("체스판 다시 칠하기 - 승구")
 class Main1018Test {
 
-   @Test
+    @Test
     @DisplayName( "체스판 다시 칠하기 테스트 케이스 1" )
     void test_case_1 () throws Exception {
         // given
