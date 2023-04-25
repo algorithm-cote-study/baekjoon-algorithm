@@ -16,7 +16,7 @@ public class Main1654 {
         }
     }
 
-    static int solution(BufferedReader reader) throws IOException {
+    static long solution(BufferedReader reader) throws IOException {
         String[] lines = reader.readLine().split(" ");
         int cnt = Integer.parseInt(lines[0]);
         int count = Integer.parseInt(lines[1]);
@@ -24,11 +24,11 @@ public class Main1654 {
         for (int i = 0; i < cnt; i++) {
             array[i] = Integer.parseInt(reader.readLine());
         }
-        int lt = 1;
-        int rt = Arrays.stream(array).max().getAsInt();
+        long lt = 1;
+        long rt = Arrays.stream(array).max().getAsInt();
         while (lt <= rt) {
             int total = 0;
-            int half = (lt + rt) / 2;
+            long half = (lt + rt) / 2;
             for (int j : array) {
                 total += (j / half);
             }
