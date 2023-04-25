@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 //블랙잭
 public class Main2798 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             System.out.println(solution(br));

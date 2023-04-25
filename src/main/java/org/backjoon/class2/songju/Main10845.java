@@ -7,7 +7,7 @@ import java.util.*;
 
 //큐
 public class Main10845 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             System.out.println(solution(br));
