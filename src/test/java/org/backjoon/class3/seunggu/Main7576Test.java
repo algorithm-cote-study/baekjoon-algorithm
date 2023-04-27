@@ -13,7 +13,7 @@ class Main7576Test {
     @Test
     @DisplayName("토마토 테스트 케이스 1")
     void test_case_1() throws Exception {
-        // given토
+        // given
         BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class3/7576/test_case1.txt");
         // when
         int solution = Main7576.solution(reader);
