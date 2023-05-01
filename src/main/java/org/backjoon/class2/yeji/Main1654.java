@@ -27,6 +27,12 @@ public class Main1654 {
             max = Math.max( max, input[i] );
         }
 
+        long end = findMaxLength( n, input, max );
+
+        return end;
+    }
+
+    private static long findMaxLength ( int[] n, int[] input, int max ) {
         long start = 1;
         long end = max;
 
@@ -43,7 +49,6 @@ public class Main1654 {
                 end = mod - 1;
             }
         }
-
         return end;
     }
 }
