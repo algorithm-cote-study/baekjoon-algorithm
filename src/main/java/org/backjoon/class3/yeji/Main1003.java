@@ -10,32 +10,31 @@ public class Main1003 {
     static int zero;
     static int one;
     static int zero_plus_one;
-    private static int[][] answer;
+    private static int[][] fibonacci;
 
     public static void main ( String[] args ) {
         try ( BufferedReader reader = new BufferedReader( new InputStreamReader( System.in ) ) ) {
 
-            solution( reader );
+            System.out.println( solution( reader ) );
 
         } catch ( IOException e ) {
             e.printStackTrace();
         }
     }
 
-    static int[][] solution ( BufferedReader br ) throws IOException {
+    static String solution ( BufferedReader br ) throws IOException {
         int n = Integer.parseInt( br.readLine() );
-        answer = new int[n][2];
+        fibonacci = new int[n][2];
         StringBuilder sb = new StringBuilder();
 
         for ( int i = 0; i < n; i++ ) {
             int N = Integer.parseInt( br.readLine() );
             fibonacci( N );
-            answer[i][0] = zero;
-            answer[i][1] = one;
+            fibonacci[i][0] = zero;
+            fibonacci[i][1] = one;
             sb.append( zero ).append( ' ' ).append( one ).append( '\n' );
         }
-        System.out.println( sb );
-        return answer;
+        return sb.toString();
     }
 
     public static void fibonacci ( int N ) {
