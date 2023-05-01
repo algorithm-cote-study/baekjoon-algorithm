@@ -23,16 +23,16 @@ public class Main11866 {
     static String solution ( BufferedReader br ) throws IOException {
         StringBuilder answer = new StringBuilder();
         answer.append( "<" );
-        int[] input = Arrays.stream( br.readLine().split( " " ) ).mapToInt( Integer::parseInt ).toArray();
+        int[] inputs = Arrays.stream( br.readLine().split( " " ) ).mapToInt( Integer::parseInt ).toArray();
 
         Deque<Integer> queue = new ArrayDeque<>();
-        for ( int i = 1; i <= input[0]; i++ ) {
+        for ( int i = 1; i <= inputs[0]; i++ ) {
             queue.offer( i );
         }
 
         int location = 1;
         while ( !queue.isEmpty() ) {
-            if ( location == input[1] ) {
+            if ( location == inputs[1] ) {
                 answer.append( queue.poll() ).append( ", " );
                 location = 1;
                 continue;
