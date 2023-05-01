@@ -16,7 +16,7 @@ class Main1654Test {
         // given
         BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class2/1654/test_case1.txt");
         // when
-        int solution = Main1654.solution(reader);
+        long solution = Main1654.solution(reader);
 
         // then
         assertEquals(200, solution);
