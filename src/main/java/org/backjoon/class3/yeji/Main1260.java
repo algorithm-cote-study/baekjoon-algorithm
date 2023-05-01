@@ -17,18 +17,21 @@ public class Main1260 {
     static int[] bfs;
 
     static boolean[] visited;
-    private static final List<List<Integer>> nodeList = new ArrayList<>();
+    private static List<List<Integer>> nodeList;
+
+    private static StringBuilder answer;
 
     public static void main ( String[] args ) {
         try ( BufferedReader reader = new BufferedReader( new InputStreamReader( System.in ) ) ) {
-            solution( reader );
-
+            System.out.println( solution( reader ) );
         } catch ( IOException e ) {
             e.printStackTrace();
         }
     }
 
-    static void solution ( BufferedReader br ) throws IOException {
+    static String solution ( BufferedReader br ) throws IOException {
+        answer = new StringBuilder();
+        nodeList = new ArrayList<>();
         int[] n = Arrays.stream( br.readLine().split( " " ) ).mapToInt( Integer::parseInt ).toArray();
         bfs = new int[n[0]];
         dfs = new int[n[0]];
@@ -46,9 +49,12 @@ public class Main1260 {
         for ( int i = 0; i <= n[0]; i++ ) {
             Collections.sort( nodeList.get( i ) );
         }
-        dfs( n[2], n[0], 0 );
-        System.out.println();
+        dfs( n[2], 0 );
+        answer.deleteCharAt( answer.length() - 1 );
+        answer.append( "\n" );
+        visited = new boolean[n[0] + 1];
         bfs( n[2], n[0] );
+        return answer.toString();
     }
 
     static void bfs ( int start, int n ) {
@@ -58,7 +64,7 @@ public class Main1260 {
         queue.offer( start );
         while ( !queue.isEmpty() ) {
             int num = queue.poll();
-            System.out.print( num + " " );
+            answer.append( num ).append( " " );
             for ( int node : nodeList.get( num ) ) {
                 if ( !visited[node] ) {
                     visited[node] = true;
@@ -68,12 +74,12 @@ public class Main1260 {
         }
     }
 
-    static void dfs ( int start, int n, int i ) {
+    static void dfs ( int start, int i ) {
         visited[start] = true;
-        System.out.print( start + " " );
+        answer.append( start ).append( " " );
         for ( int node : nodeList.get( start ) ) {
             if ( !visited[node] ) {
-                dfs( node, n, i + 1 );
+                dfs( node, i + 1 );
             }
         }
     }
