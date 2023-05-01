@@ -33,10 +33,10 @@ public class Main2798 {
             for(int j=i+1;j<num-1;j++){
                 for(int k=j+1;k<num;k++){
                     result = arr[i]+arr[j]+arr[k];
-                    if(result<=sum){
-                        if(result == sum) return sum;
+                    if(result == sum)
+                        return sum;
+                    else if(result<sum)
                         max = Math.max(max, result);
-                    }
                 }
             }
         }
