@@ -31,7 +31,8 @@ public class Main11866 {
         }
 
         int location = 1;
-        while ( !queue.isEmpty() ) {
+
+        while ( queue.size() > 1 ) {
             if ( location == inputs[1] ) {
                 answer.append( queue.poll() ).append( ", " );
                 location = 1;
@@ -41,9 +42,7 @@ public class Main11866 {
             queue.offer( poll );
             location++;
         }
-        answer.deleteCharAt( answer.length() - 1 );
-        answer.deleteCharAt( answer.length() - 1 );
-        answer.append( ">" );
+        answer.append( queue.poll() ).append( ">" );
         return answer.toString();
     }
 }
