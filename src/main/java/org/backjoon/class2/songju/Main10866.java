@@ -20,7 +20,7 @@ public class Main10866 {
     }
 
     public static String solution(BufferedReader br) throws IOException{
-        Deque<Integer> queue = new LinkedList<Integer>();
+        Deque<Integer> queue = new LinkedList<>();
         StringBuilder result = new StringBuilder();
 
         int val = 0;
@@ -32,26 +32,37 @@ public class Main10866 {
             switch (command){
                 case "push_front":
                     val = Integer.parseInt(st.nextToken());
-                    queue.offerFirst(val); break;
+                    queue.offerFirst(val);
+                    break;
                 case "push_back":
                     val = Integer.parseInt(st.nextToken());
-                    queue.offerLast(val); break;
+                    queue.offerLast(val);
+                    break;
                 case "pop_front":
                     if(queue.isEmpty()) result.append(-1);
-                    else result.append(queue.pollFirst()); break;
+                    else result.append(queue.pollFirst());
+                    break;
                 case "pop_back":
                     if(queue.isEmpty()) result.append(-1);
-                    else result.append(queue.pollLast()); break;
+                    else result.append(queue.pollLast());
+                    break;
                 case "size":
-                    result.append(queue.size()); break;
+                    result.append(queue.size());
+                    break;
                 case "empty":
-                    result.append(queue.isEmpty() ? "1" : "0"); break;
+                    result.append(queue.isEmpty() ? "1" : "0");
+                    break;
                 case "front":
                     if(queue.isEmpty()) result.append(-1);
-                    else result.append(queue.peekFirst()); break;
+                    else result.append(queue.peekFirst());
+                    break;
                 case "back":
                     if(queue.isEmpty()) result.append(-1);
-                    else result.append(queue.peekLast()); break;
+                    else result.append(queue.peekLast());
+                    break;
+                default :
+                    queue.offer(Integer.parseInt(st.nextToken()));
+                    break;
             }
             if(!command.startsWith("push"))result.append("\n");
         }
