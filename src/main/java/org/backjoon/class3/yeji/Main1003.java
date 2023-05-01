@@ -39,7 +39,7 @@ public class Main1003 {
     }
 
     public static void fibonacci ( int N ) {
-        // 반드시 초기화 해야한다.
+        // 전역변수로 선언했기 때문에 반드시 초기화 해야한다.
         zero = 1;
         one = 0;
         zero_plus_one = 1;
