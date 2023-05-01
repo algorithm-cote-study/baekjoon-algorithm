@@ -30,16 +30,16 @@ public class Main11866 {
             queue.offer( i );
         }
 
-        int i = 1;
+        int location = 1;
         while ( !queue.isEmpty() ) {
-            if ( i == input[1] ) {
+            if ( location == input[1] ) {
                 answer.append( queue.poll() ).append( ", " );
-                i = 1;
+                location = 1;
                 continue;
             }
             int poll = queue.poll();
             queue.offer( poll );
-            i++;
+            location++;
         }
         answer.deleteCharAt( answer.length() - 1 );
         answer.deleteCharAt( answer.length() - 1 );
