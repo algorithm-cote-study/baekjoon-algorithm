@@ -9,6 +9,9 @@ import java.util.Deque;
 import java.util.PriorityQueue;
 import java.util.TreeMap;
 
+/**
+ * 이중 우선순위 큐( 골드 4 )
+ */
 public class Main7662 {
 
     public static void main(String[] args) {
@@ -57,6 +60,9 @@ public class Main7662 {
     }
 
 
+    /**
+     * 시간 초과 방법 ( 우선 순위 큐 2개 구현 )
+     */
     private static void calculate2(BufferedReader reader, StringBuilder stringBuilder) throws IOException {
         PriorityQueue<Integer> min = new PriorityQueue<>();
         PriorityQueue<Integer> max = new PriorityQueue<>(Collections.reverseOrder());
@@ -88,6 +94,9 @@ public class Main7662 {
 
     }
 
+    /**
+     * 시간 초과 ( deque로 양쪽 배교해서 넣는 방식 )
+     */
     private static void calculate1(BufferedReader reader, StringBuilder stringBuilder) throws IOException {
         Deque<Integer> deque = new ArrayDeque<>();
         int count = Integer.parseInt(reader.readLine());
