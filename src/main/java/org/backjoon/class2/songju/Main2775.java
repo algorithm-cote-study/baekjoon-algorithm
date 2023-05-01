@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 //부녀회장이 될테야
 public class Main2775 {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             System.out.println(solution(br));
