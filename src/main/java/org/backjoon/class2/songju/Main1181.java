@@ -35,13 +35,13 @@ public class Main1181 {
                 } else {
                     return s1.length() - s2.length();
                 }
-
             }
         });
 
-        for(int j=0;j<num;j++) {
-            if(j>0 && words[j].equals(words[j-1])) continue;
-            result.append(words[j]).append("\n");
+        result.append(words[0]).append("\n");
+        for(int j=1;j<num;j++) {
+            if(!words[j].equals(words[j-1]))
+                result.append(words[j]).append("\n");
         }
         return result.toString();
     }
