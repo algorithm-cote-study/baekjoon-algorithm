@@ -7,7 +7,15 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
+/**
+ * 유기농 배추( 실버 2 )
+ */
 public class Main1012 {
+
+    private static final int[] dx = {-1, 0, 1, 0};
+    private static final int[] dy = {0, 1, 0, -1};
+    private static boolean[][] board;
+    private static boolean[][] visited;
 
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
@@ -23,19 +31,19 @@ public class Main1012 {
         for (int i = 0; i < count; i++) {
             int answer = 0;
             int[] array = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-            boolean[][] board = getBoard(reader, array);
-            boolean[][] visited = new boolean[array[0]][array[1]];
-            answer = getAnswer(answer, board, visited);
+            board = getBoard(reader, array);
+            visited = new boolean[array[0]][array[1]];
+            answer = getAnswer(answer);
             stringBuilder.append(answer).append('\n');
         }
         return stringBuilder.toString();
     }
 
-    private static int getAnswer(int answer, boolean[][] board, boolean[][] visited) {
+    private static int getAnswer(int answer) {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 if (board[i][j] && !visited[i][j]) {
-                    bfs(i, j, board, visited);
+                    bfs(i, j);
                     answer++;
                 }
             }
@@ -53,10 +61,7 @@ public class Main1012 {
         return board;
     }
 
-    private static final int[] dx = {-1, 0, 1, 0};
-    private static final int[] dy = {0, 1, 0, -1};
-
-    private static void bfs(int x, int y, boolean[][] board, boolean[][] visited) {
+    private static void bfs(int x, int y) {
         visited[x][y] = true;
         Deque<Point> points = new ArrayDeque<>();
         points.add(Point.of(x, y));
