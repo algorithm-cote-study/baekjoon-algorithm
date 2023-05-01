@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.StringTokenizer;
 
 //좌표 정렬하기
@@ -28,12 +27,9 @@ public class Main11650 {
             point[i][1] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(point, new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                int idx= o1[0] == o2[0] ? 1 : 0;
-                return o1[idx]-o2[idx];
-            }
+        Arrays.sort(point, (o1, o2) -> {
+            int idx= o1[0] == o2[0] ? 1 : 0;
+            return o1[idx]-o2[idx];
         });
 
         for(int i=0;i<N;i++){

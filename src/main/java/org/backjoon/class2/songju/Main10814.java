@@ -28,12 +28,7 @@ public class Main10814 {
             member[i][1] = st.nextToken();
         }
 
-        Arrays.sort(member, new Comparator<String []>(){
-            @Override
-            public int compare(String [] s1, String [] s2){
-                return Integer.parseInt(s1[0]) - Integer.parseInt(s2[0]);
-            }
-        });
+        Arrays.sort(member, (s1, s2) -> Integer.parseInt(s1[0]) - Integer.parseInt(s2[0]));
 
         for(String [] m : member){
             result.append(m[0]).append(" ").append(m[1]).append("\n");
