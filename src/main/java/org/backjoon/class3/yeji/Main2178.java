@@ -39,13 +39,13 @@ public class Main2178 {
 
         visited[0][0] = true;
         mirro[0][0] = 1;
-        bfs( 0, 0 );
+        bfs();
         return mirro[x - 1][y - 1];
     }
 
-    static void bfs ( int i, int j ) {
+    static void bfs () {
         Deque<int[]> deque = new ArrayDeque<>();
-        deque.offer( new int[]{ i, j } );
+        deque.offer( new int[]{ 0, 0 } );
 
         while ( !deque.isEmpty() ) {
             int[] poll = deque.poll();
