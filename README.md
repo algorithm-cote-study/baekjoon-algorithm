@@ -80,6 +80,16 @@ class Main1018Test {
 - remove : 파일을 삭제하는 작업만 수행한 경우
 - comment : 필요한 주석 추가 및 변경
 
+## <img src="https://img.icons8.com/color/48/null/very-popular-topic.png" width="30" height="30" style="padding: 0;margin-bottom:-5px;"/> Code Review 규칙
+
+1. 매주 일요일 푼 문제를 PR (feature. 라벨 표시)
+   ![스크린샷 2023-05-01 오후 4.52.36.png](https://raw.githubusercontent.com/algorithm-cote-study/baekjoon-algorithm/docs/readme_file/feature.png)
+2. [wiki](https://github.com/algorithm-cote-study/baekjoon-algorithm/wiki)에 각자 1문제씩 등록
+3. 코드 리뷰 완료 후 각자 지정된 comment label 표시
+4. 코드 리뷰 토대로 수정 완료 후 refactor 또는 Bugfix 라벨 표시
+   ![스크린샷 2023-05-02 오전 10.41.05.png](https://github.com/algorithm-cote-study/baekjoon-algorithm/blob/docs/readme_file/refactor.png?raw=true)
+5. 최종 branch merge
+
 ## Contributors
 
 <table >
