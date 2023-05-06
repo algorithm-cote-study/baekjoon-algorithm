@@ -6,19 +6,20 @@ import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 
+// 토마토 7569 성공풀이
 public class Main7569Success implements Main7569 {
 
-    private static final int[] dx = { -1, 0, 1, 0, 0, 0 };
+    private static final int[] dz = { -1, 0, 1, 0, 0, 0 };
     private static final int[] dy = { 0, 1, 0, -1, 0, 0 };
-    private static final int[] dz = { 0, 0, 0, 0, 1, -1 };
+    private static final int[] dx = { 0, 0, 0, 0, 1, -1 };
 
     private static int m, n, h;
-    private static int[][][] tomato;
+    private int[][][] tomato;
 
-    private static Deque<Node> queue;
+    private static Deque<int[]> queue;
 
     public int solution ( BufferedReader br ) throws IOException {
-        int answer = Integer.MIN_VALUE;
+        int answer = 0;
         int[] input = Arrays.stream( br.readLine().split( " " ) ).mapToInt( Integer::parseInt ).toArray();
         m = input[0];
         n = input[1];
@@ -26,18 +27,19 @@ public class Main7569Success implements Main7569 {
         tomato = new int[h][n][m];
         queue = new LinkedList<>();
 
+        // tomato 넣기
         for ( int i = 0; i < h; i++ ) {
             for ( int j = 0; j < n; j++ ) {
                 tomato[i][j] = Arrays.stream( br.readLine().split( " " ) ).mapToInt( Integer::parseInt ).toArray();
                 for ( int x = 0; x < tomato[i][j].length; x++ ) {
                     if ( tomato[i][j][x] == 1 ) {
-                        queue.offer( new Node( x, j, i ) );
+                        queue.offer( new int[]{ i, j, x } );
                     }
                 }
             }
         }
 
-        dfs();
+        bfs();
 
         for ( int i = 0; i < h; i++ ) {
             for ( int j = 0; j < n; j++ ) {
@@ -53,37 +55,26 @@ public class Main7569Success implements Main7569 {
         return answer - 1;
     }
 
-    private void dfs () {
+    private void bfs () {
         while ( !queue.isEmpty() ) {
-            Node node = queue.poll();
-            int nm = node.m;
-            int nn = node.n;
-            int nh = node.h;
+            int[] cur = queue.poll();
+            int nowX = cur[0];
+            int nowY = cur[1];
+            int nowZ = cur[2];
 
             for ( int i = 0; i < 6; i++ ) {
-                int x = node.n + dx[i];
-                int y = node.m + dy[i];
-                int z = node.h = dz[i];
-                if ( x >= 0 && x < n && y >= 0 && y < m && z >= 0 && z < h && ( tomato[z][x][y] == 0 ) ) {
-                    tomato[z][x][y] = tomato[nh][nn][nm] + 1;
-                    queue.offer( new Node( y, x, node.h ) );
+                int curX = nowX + dx[i];
+                int curY = nowY + dy[i];
+                int curZ = nowZ + dz[i];
 
+                if ( curX >= 0 && curX < h && curY >= 0 && curY < n && curZ >= 0 && curZ < m ) {
+                    if ( tomato[curX][curY][curZ] == 0 ) {
+                        queue.offer( new int[]{ curX, curY, curZ } );
+                        tomato[curX][curY][curZ] = tomato[nowX][nowY][nowZ] + 1;
+                    }
                 }
             }
         }
-
     }
-}
 
-class Node {
-
-    int m;
-    int n;
-    int h;
-
-    Node ( int m, int n, int h ) {
-        this.m = m;
-        this.n = n;
-        this.h = h;
-    }
 }
