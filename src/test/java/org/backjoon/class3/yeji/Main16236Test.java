@@ -57,7 +57,7 @@ class Main16236Test {
         int solution = solution( reader );
 
         // then
-        assertEquals( 0, solution );
+        assertEquals( 60, solution );
     }
 
     @Test
@@ -69,6 +69,6 @@ class Main16236Test {
         int solution = solution( reader );
 
         // then
-        assertEquals( 0, solution );
+        assertEquals( 48, solution );
     }
 }
