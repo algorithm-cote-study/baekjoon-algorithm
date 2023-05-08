@@ -10,41 +10,40 @@ public class Main2579 {
     private static int[] stairs;
     private static int[] compareStairs;
 
-    public static void main ( String[] args ) {
-        try ( BufferedReader reader = new BufferedReader( new InputStreamReader( System.in ) ) ) {
+    public static void main(String[] args) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
 
-            System.out.println( solution( reader ) );
+            System.out.println(solution(reader));
 
-        } catch ( IOException e ) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    static int solution ( BufferedReader br ) throws IOException {
-        int n = Integer.parseInt( br.readLine() );
+    static int solution(BufferedReader br) throws IOException {
+        int n = Integer.parseInt(br.readLine());
 
         stairs = new int[n + 1];
         compareStairs = new int[n + 1];
 
-        for ( int i = 1; i <= n; i++ ) {
-            stairs[i] = Integer.parseInt( br.readLine() );
+        for (int i = 1; i <= n; i++) {
+            stairs[i] = Integer.parseInt(br.readLine());
         }
-        findMaxStair( n );
+        findMaxStair(n);
 
         return compareStairs[n];
     }
 
-    static int findMaxStair ( int n ) {
+    static void findMaxStair(int n) {
         compareStairs[1] = stairs[1];
 
-        if ( n >= 2 ) {
+        if (n >= 2) {
             compareStairs[2] = stairs[1] + stairs[2];
         }
 
-        for ( int i = 3; i <= n; i++ ) {
-            compareStairs[i] = Math.max( compareStairs[i - 2], compareStairs[i - 3] + stairs[i - 1] ) + stairs[i];
+        for (int i = 3; i <= n; i++) {
+            compareStairs[i] = Math.max(compareStairs[i - 2], compareStairs[i - 3] + stairs[i - 1]) + stairs[i];
         }
 
-        return 0;
     }
 }
