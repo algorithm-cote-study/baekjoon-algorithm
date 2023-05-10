@@ -15,17 +15,14 @@
 
 ## <img src="https://img.icons8.com/color/48/null/folder-tree.png" width="30" height="30" style="padding: 0;margin-bottom:-5px;"/> 패키지 생성 기준
 
-1. 패키지는 solved.ac의 class 분류대로 폴더를 생성했습니다. [바로가기](https://solved.ac/en/class) </br>
+1. ~~패키지는 solved.ac의 class 분류대로 폴더를 생성했습니다. [바로가기](https://solved.ac/en/class)~~  문제집 생성 순으로 변경 -
+   2023.05.08</br>
 2. class 별로 각자 이름 패키지 생성
 
 ```
 .
 └── java
     ├── class1  <- class1
-    │   └── seunggu
-    ├── class1p <- class1+
-    │   └── seunggu
-    ├── class1pp <- class1++
     │   └── seunggu
     ├── class2
     │   └── seunggu
@@ -47,20 +44,20 @@
 ```java
 
 // 테스트케이스 만들기 예시
-@DisplayName( "체스판 다시 칠하기 - 승구" )
+@DisplayName("체스판 다시 칠하기 - 승구")
 class Main1018Test {
 
     @Test
-    @DisplayName( "체스판 다시 칠하기 테스트 케이스 1" )
-    void test_case_1 () throws Exception {
+    @DisplayName("체스판 다시 칠하기 테스트 케이스 1")
+    void test_case_1() throws Exception {
         // given
-        BufferedReader reader = TestFileUtil.getReader( this.getClass(),
-                                                        "testcase/class2/1018/test_case1.txt" );
+        BufferedReader reader = TestFileUtil.getReader(this.getClass(),
+            "testcase/class2/1018/test_case1.txt");
         // when
-        int solution = Main1018.solution( reader );
+        int solution = Main1018.solution(reader);
 
         // then
-        assertEquals( 1, solution );
+        assertEquals(1, solution);
 
     }
 
@@ -84,11 +81,19 @@ class Main1018Test {
 
 1. 매주 일요일 푼 문제를 PR (feature. 라벨 표시)
    ![스크린샷 2023-05-01 오후 4.52.36.png](https://raw.githubusercontent.com/algorithm-cote-study/baekjoon-algorithm/docs/readme_file/feature.png)
-2. [wiki](https://github.com/algorithm-cote-study/baekjoon-algorithm/wiki)에 각자 1문제씩 등록
+2. ~~[wiki](https://github.com/algorithm-cote-study/baekjoon-algorithm/wiki)에 각자 1문제씩 등록~~
+   순서대로 [백준 문제집](https://www.acmicpc.net/group/workbook/17769) 생성해서 wiki 업데이트 - 2023.05.08
 3. 코드 리뷰 완료 후 각자 지정된 comment label 표시
 4. 코드 리뷰 토대로 수정 완료 후 refactor 또는 Bugfix 라벨 표시
    ![스크린샷 2023-05-02 오전 10.41.05.png](https://github.com/algorithm-cote-study/baekjoon-algorithm/blob/docs/readme_file/refactor.png?raw=true)
 5. 최종 branch merge
+
+## <img src="https://img.icons8.com/color/48/null/light.png" width="30" height="30" style="padding: 0;margin-bottom:-5px;"/>  변경이력
+
+- [📢 코드 merge 관련의 건](https://github.com/algorithm-cote-study/baekjoon-algorithm/issues/10) -
+  2023.05.07
+- [📢 알고리즘 문제 선정 방식 변경](https://github.com/algorithm-cote-study/baekjoon-algorithm/issues/11) -
+  2023.05.08
 
 ## Contributors
 
