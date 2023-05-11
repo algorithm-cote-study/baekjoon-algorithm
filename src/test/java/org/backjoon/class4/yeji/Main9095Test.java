@@ -1,6 +1,6 @@
-package org.backjoon.class4;
+package org.backjoon.class4.yeji;
 
-import static org.backjoon.class4.Main1717.solution;
+import static org.backjoon.class4.yeji.Main9095.solution;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.BufferedReader;
@@ -9,21 +9,21 @@ import org.backjoon.common.TestFileUtil;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@DisplayName("집합의 표현 - 예지")
-class Main1717Test {
+@DisplayName("1,2,3 더하기 - 예지")
+class Main9095Test {
 
     @Test
-    @DisplayName("집합의 표현 케이스1")
+    @DisplayName("1,2,3 더하기 케이스1")
     void test_case_1() throws IOException {
         // given
-        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class4/1717/test_case1.txt");
+        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class4/9095/test_case1.txt");
         // when
         String solution = solution(reader);
         // then
         assertEquals("""
-            NO
-            NO
-            YES
+            7
+            44
+            274
             """.trim(), solution.trim());
     }
 }
