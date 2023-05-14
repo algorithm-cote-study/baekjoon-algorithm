@@ -66,9 +66,8 @@ public class Main5430 {
             answer.append(reversed ? deque.pollLast() : deque.pollFirst()).append(",");
         }
         answer.append(!deque.isEmpty() ? deque.poll() : "");
-        answer.append("]");
-
-        return answer + "\n";
+        answer.append("]").append("\n");
+        return answer.toString();
     }
 
 }
