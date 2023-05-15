@@ -25,7 +25,7 @@ public class Main11286 {
         int n = Integer.parseInt(br.readLine());
         StringBuilder answer = new StringBuilder();
 
-        while (n > 0) {
+        for (int i = 0; i < n; i++) {
             int num = Integer.parseInt(br.readLine());
 
             if (num == 0) {
@@ -34,7 +34,6 @@ public class Main11286 {
                 priorityQueue.offer(num);
             }
 
-            n--;
         }
 
         return answer.toString();
