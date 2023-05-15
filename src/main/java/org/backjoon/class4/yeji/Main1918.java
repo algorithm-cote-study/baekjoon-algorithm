@@ -32,7 +32,7 @@ public class Main1918 {
                     stack.push(input);
                 }
                 case ')' -> {
-                    while (stack.peek() != null && '(' != stack.peek()) {
+                    while (!stack.isEmpty() && '(' != stack.peek()) {
                         answer.append(stack.pop());
                     }
                     stack.pop();
