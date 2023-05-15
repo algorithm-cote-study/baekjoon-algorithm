@@ -21,14 +21,14 @@ public class Main5430 {
     static String solution(BufferedReader br) throws IOException {
         StringBuilder answer = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
-        while (n > 0) {
+        for (int i = 0; i < n; i++) {
             String[] languages = br.readLine().split("");
             br.readLine();
             String[] collect = br.readLine().split(",|\\[|\\]");
 
             answer.append(renewalArrays(languages, collect));
 
-            n--;
+
         }
         return answer.toString();
     }
