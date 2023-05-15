@@ -29,7 +29,7 @@ public class Main11286 {
             int num = Integer.parseInt(br.readLine());
 
             if (num == 0) {
-                answer.append(popData(priorityQueue));
+                answer.append(popData(priorityQueue)).append("\n");
             } else {
                 priorityQueue.offer(num);
             }
@@ -41,7 +41,7 @@ public class Main11286 {
     }
 
     private static String popData(PriorityQueue<Integer> priorityQueue) {
-        return priorityQueue.isEmpty() ? "0\n" : priorityQueue.poll() + "\n";
+        return priorityQueue.isEmpty() ? "0" : priorityQueue.poll().toString();
     }
 
 }
