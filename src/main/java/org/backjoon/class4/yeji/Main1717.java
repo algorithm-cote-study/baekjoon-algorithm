@@ -21,13 +21,13 @@ public class Main1717 {
 
     static String solution(BufferedReader br) throws IOException {
         StringBuilder answer = new StringBuilder();
-        int[] input = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-        data = new int[input[0] + 1];
+        int[] ziphops = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        data = new int[ziphops[0] + 1];
         for (int i = 1; i < data.length; i++) {
             data[i] = i;
         }
 
-        for (int i = 0; i < input[1]; i++) {
+        for (int i = 0; i < ziphops[1]; i++) {
             int[] array = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             if (array[0] == 0) {
                 union(array[1], array[2]);
