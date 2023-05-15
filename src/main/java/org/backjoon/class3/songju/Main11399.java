@@ -18,8 +18,7 @@ public class Main11399 {
 
     public static int solution(BufferedReader br) throws IOException {
         int N = Integer.parseInt(br.readLine());
-        int [] atmTimes = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-        Arrays.sort(atmTimes);
+        int [] atmTimes = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).sorted().toArray();
         int sum = 0;
         int prev = 0;
 
