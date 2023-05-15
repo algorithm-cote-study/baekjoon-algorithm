@@ -23,7 +23,7 @@ public class Main5430 {
         int n = Integer.parseInt(br.readLine());
         while (n > 0) {
             String[] languages = br.readLine().split("");
-            Integer.parseInt(br.readLine());
+            br.readLine();
             String[] collect = br.readLine().split(",|\\[|\\]");
 
             answer.append(renewalArrays(languages, collect));
