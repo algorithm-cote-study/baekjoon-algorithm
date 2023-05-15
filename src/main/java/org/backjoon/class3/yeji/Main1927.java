@@ -24,15 +24,15 @@ public class Main1927 {
         StringBuilder answer = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
 
-        while (n > 0) {
-            int i = Integer.parseInt(br.readLine());
+        for (int i = 0; i < n; i++) {
+            int num = Integer.parseInt(br.readLine());
 
-            if (i == 0) {
-                answer.append(pQ.isEmpty() ? "0\n" : pQ.poll() + "\n");
+            if (num == 0) {
+                answer.append(pQ.isEmpty() ? "0" : pQ.poll()).append("\n");
             } else {
-                pQ.offer(i);
+                pQ.offer(num);
             }
-            n--;
+
         }
 
         return answer.toString();
