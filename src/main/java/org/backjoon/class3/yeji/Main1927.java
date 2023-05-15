@@ -20,7 +20,7 @@ public class Main1927 {
     }
 
     static String solution(BufferedReader br) throws IOException {
-        Queue<Integer> pQ = new PriorityQueue<>();
+        Queue<Integer> priorityQueue = new PriorityQueue<>();
         StringBuilder answer = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
 
@@ -28,9 +28,9 @@ public class Main1927 {
             int num = Integer.parseInt(br.readLine());
 
             if (num == 0) {
-                answer.append(pQ.isEmpty() ? "0" : pQ.poll()).append("\n");
+                answer.append(priorityQueue.isEmpty() ? "0" : priorityQueue.poll()).append("\n");
             } else {
-                pQ.offer(num);
+                priorityQueue.offer(num);
             }
 
         }
