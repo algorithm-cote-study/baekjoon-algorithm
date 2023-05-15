@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 
 // 최소 힙
@@ -19,7 +20,7 @@ public class Main1927 {
     }
 
     static String solution(BufferedReader br) throws IOException {
-        PriorityQueue<Integer> pQ = new PriorityQueue<>();
+        Queue<Integer> pQ = new PriorityQueue<>();
         StringBuilder answer = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
 
