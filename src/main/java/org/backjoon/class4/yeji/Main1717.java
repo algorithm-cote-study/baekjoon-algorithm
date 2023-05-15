@@ -32,14 +32,14 @@ public class Main1717 {
             if (array[0] == 0) {
                 union(array[1], array[2]);
             } else {
-                answer.append(checkAggregation(array[1], array[2]));
+                answer.append(checkAggregation(array[1], array[2])).append("\n");
             }
         }
         return answer.toString();
     }
 
     private static String checkAggregation(int a, int b) {
-        return find(a) != find(b) ? "NO\n" : "YES\n";
+        return find(a) != find(b) ? "NO" : "YES";
     }
 
     private static void union(int a, int b) {
