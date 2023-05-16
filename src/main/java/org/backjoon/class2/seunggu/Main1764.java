@@ -3,14 +3,15 @@ package org.backjoon.class2.seunggu;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+/**
+ * 듣보잡( 실버 4 )
+ */
 public class Main1764 {
 
     public static void main(String[] args) {
@@ -22,12 +23,6 @@ public class Main1764 {
     }
 
     private static String solution(BufferedReader reader) throws IOException {
-
-        Deque<Integer> deque = new ArrayDeque<>();
-        Integer integer = deque.pollLast();
-        if (integer == 1) {
-
-        }
         Map<String, Boolean> heard = new HashMap<>();
         Queue<String> queue = new PriorityQueue<>();
         int[] numbers = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
