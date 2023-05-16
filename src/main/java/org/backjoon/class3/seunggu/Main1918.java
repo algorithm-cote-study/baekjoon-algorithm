@@ -49,20 +49,12 @@ public class Main1918 {
     }
 
     private static int priority(String word) {
-        switch (word) {
-            case "(", ")" -> {
-                return 1;
-            }
-            case "+", "-" -> {
-                return 2;
-            }
-            case "*", "/" -> {
-                return 3;
-            }
-            default -> {
-                return 0;
-            }
-        }
+        return switch (word) {
+            case "(", ")" -> 1;
+            case "+", "-" -> 2;
+            case "*", "/" -> 3;
+            default -> 0;
+        };
     }
 
 
