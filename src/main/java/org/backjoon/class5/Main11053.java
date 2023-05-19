@@ -22,18 +22,22 @@ public class Main11053 {
         int[] result = new int[n];
         Arrays.fill(result, 1);
 
-        int finalMax = 0;
+        int max = 0;
         for (int i = 0; i < n; i++) {
-            int max = 0;
-            for (int j = 0; j < i; j++) {
-                if (sequences[i] > sequences[j]) {
-                    max = Math.max(max, result[j]);
-                }
-            }
-            result[i] += max;
-            finalMax = Math.max(finalMax, result[i]);
+            result[i] += findMaxSequenceCount(sequences, result, i);
+            max = Math.max(max, result[i]);
         }
 
-        return finalMax;
+        return max;
+    }
+
+    private static int findMaxSequenceCount(int[] sequences, int[] result, int i) {
+        int max = 0;
+        for (int j = 0; j < i; j++) {
+            if (sequences[i] > sequences[j]) {
+                max = Math.max(max, result[j]);
+            }
+        }
+        return max;
     }
 }
