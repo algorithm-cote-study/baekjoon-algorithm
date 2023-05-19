@@ -22,6 +22,7 @@ public class Main11053 {
         int[] result = new int[n];
         Arrays.fill(result, 1);
 
+        int finalMax = 0;
         for (int i = 0; i < n; i++) {
             int max = 0;
             for (int j = 0; j < i; j++) {
@@ -30,8 +31,9 @@ public class Main11053 {
                 }
             }
             result[i] += max;
+            finalMax = Math.max(finalMax, result[i]);
         }
 
-        return Arrays.stream(result).max().getAsInt();
+        return finalMax;
     }
 }
