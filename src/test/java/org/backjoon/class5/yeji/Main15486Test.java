@@ -1,6 +1,6 @@
-package org.backjoon.class5;
+package org.backjoon.class5.yeji;
 
-import static org.backjoon.class5.Main15486.solution;
+import static org.backjoon.class5.yeji.Main15486.solution;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.BufferedReader;

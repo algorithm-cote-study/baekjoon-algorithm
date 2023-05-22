@@ -1,9 +1,10 @@
-package org.backjoon.class5;
+package org.backjoon.class5.yeji;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -75,6 +76,19 @@ public class Main1520 {
         @Override
         public int compareTo(Node node) {
             return node.height - this.height;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Node node = (Node) o;
+            return x == node.x && y == node.y && height == node.height;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(x, y, height);
         }
     }
 }
