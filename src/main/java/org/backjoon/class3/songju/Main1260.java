@@ -8,13 +8,12 @@ import java.util.*;
 //DFS와 BFS
 public class Main1260 {
 
-    static boolean[][] nodeTreeArr;
-    static boolean[] visited;
-    static StringBuilder result;
-
-    static int node;
-    static int line;
-    static int startNode;
+    private static boolean[][] nodeTreeArr;
+    private static boolean[] visited;
+    private static StringBuilder result;
+    private static int node;
+    private static int line;
+    private static int startNode;
 
     public static void main(String[] args) {
         try {
@@ -49,7 +48,7 @@ public class Main1260 {
         return result.toString();
     }
 
-    static void dfs(int start) {
+    private static void dfs(int start) {
         visited[start] = true;
         result.append(start).append(" ");
         for (int i = 1; i <= node; i++) {
@@ -59,7 +58,7 @@ public class Main1260 {
         }
     }
 
-    static void bfs() {
+    private static void bfs() {
         Deque<Integer> queue = new ArrayDeque<>();
         queue.offer(startNode);
         visited[startNode] = true;
