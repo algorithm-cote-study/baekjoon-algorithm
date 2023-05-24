@@ -42,15 +42,13 @@ public class Main16928 {
                 int next = now + i;
                 if( 100 >= next && !visited[next] ) {
                     visited[next] = true;
-                    if(snake[next] != 0) {
-                        if(!visited[snake[next]]) {
-                            queue.offer(snake[next]);
-                            visited[snake[next]] = true;
-                            board[snake[next]] = board[now] + 1;
-                        }
-                    } else {
+                    if(snake[next] == 0) {
                         queue.offer(next);
                         board[next] = board[now] + 1;
+                    } else if(!visited[snake[next]]) {
+                        queue.offer(snake[next]);
+                        visited[snake[next]] = true;
+                        board[snake[next]] = board[now] + 1;
                     }
                 }
             }
