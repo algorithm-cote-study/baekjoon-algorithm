@@ -12,10 +12,7 @@ import java.util.List;
 
 // DFS와 BFS
 public class Main1260 {
-
-    private static int[] dfs;
-    private static int[] bfs;
-
+    
     private static boolean[] visited;
     private static List<List<Integer>> nodeList;
 
@@ -33,8 +30,6 @@ public class Main1260 {
         answer = new StringBuilder();
         nodeList = new ArrayList<>();
         int[] n = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-        bfs = new int[n[0]];
-        dfs = new int[n[0]];
         visited = new boolean[n[0] + 1];
         for (int i = 0; i <= n[0]; i++) {
             nodeList.add(new ArrayList<>());
