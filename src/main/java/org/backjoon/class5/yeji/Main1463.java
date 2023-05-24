@@ -43,8 +43,8 @@ public class Main1463 {
 
     static class Node {
 
-        int key;
-        int count;
+        private final int key;
+        private final int count;
 
         Node(int key, int count) {
             this.key = key;
