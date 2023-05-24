@@ -40,17 +40,18 @@ public class Main16928 {
             int now = queue.poll();
             for(int i=1; i<7; i++) {
                 int next = now + i;
-                if( 100 < next || visited[next] ) continue;
-                visited[next] = true;
-                if(snake[next] != 0) {
-                    if(!visited[snake[next]]) {
-                        queue.offer(snake[next]);
-                        visited[snake[next]] = true;
-                        board[snake[next]] = board[now] + 1;
+                if( 100 >= next && !visited[next] ) {
+                    visited[next] = true;
+                    if(snake[next] != 0) {
+                        if(!visited[snake[next]]) {
+                            queue.offer(snake[next]);
+                            visited[snake[next]] = true;
+                            board[snake[next]] = board[now] + 1;
+                        }
+                    } else {
+                        queue.offer(next);
+                        board[next] = board[now] + 1;
                     }
-                } else {
-                    queue.offer(next);
-                    board[next] = board[now] + 1;
                 }
             }
         }
