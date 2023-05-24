@@ -62,10 +62,10 @@ public class Main1520 {
 
     static class Node implements Comparable<Node> {
 
-        int x;
-        int y;
+        private final int x;
+        private final int y;
 
-        int height;
+        private final int height;
 
         Node(int x, int y, int height) {
             this.x = x;
