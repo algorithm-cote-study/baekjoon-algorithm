@@ -44,9 +44,9 @@ public class Main15486 {
 
     static class Schedule {
 
-        int day;
-        int requiredDays;
-        int cost;
+        private final int day;
+        private final int requiredDays;
+        private final int cost;
 
         public Schedule(int day, int requiredDays, int cost) {
             this.day = day;
