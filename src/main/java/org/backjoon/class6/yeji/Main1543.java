@@ -20,12 +20,12 @@ public class Main1543 {
     static int solution(BufferedReader br) throws IOException {
         int answer = 0;
         String document = br.readLine();
-        String sejoon = br.readLine();
+        String searchWord = br.readLine();
 
         int i = 0;
-        while (document.indexOf(sejoon, i) != -1) {
+        while (document.indexOf(searchWord, i) != -1) {
             answer++;
-            i = (document.indexOf(sejoon, i) + sejoon.length());
+            i = (document.indexOf(searchWord, i) + searchWord.length());
         }
 
         return answer;
