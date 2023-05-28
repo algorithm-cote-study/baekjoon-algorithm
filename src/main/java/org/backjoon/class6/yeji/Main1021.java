@@ -31,7 +31,6 @@ public class Main1021 {
         }
 
         for (int array : arrays) {
-
             int cur = queue.indexOf(array);
             int middle;
             if (queue.size() % 2 == 0) {
@@ -39,21 +38,23 @@ public class Main1021 {
             } else {
                 middle = queue.size() / 2;
             }
-
-            if (cur <= middle) {
-                for (int j = 0; j < cur; j++) {
-                    Integer temp = queue.pollFirst();
-                    queue.offerLast(temp);
-                    count++;
-                }
-            } else {
-                for (int j = 0; j < queue.size() - cur; j++) {
-                    Integer temp = queue.pollLast();
-                    queue.offerFirst(temp);
-                    count++;
-                }
-            }
+            count = getCount(count, queue, cur, middle);
             queue.pollFirst();
+        }
+        return count;
+    }
+
+    private static int getCount(int count, LinkedList<Integer> queue, int cur, int middle) {
+        boolean isLowerMiddle = cur <= middle;
+        int size = isLowerMiddle ? cur : queue.size() - cur;
+        for (int i = 0; i < size; i++) {
+            Integer temp = isLowerMiddle ? queue.pollFirst() : queue.pollLast();
+            if (isLowerMiddle) {
+                queue.offerLast(temp);
+            } else {
+                queue.offerFirst(temp);
+            }
+            count++;
         }
         return count;
     }
