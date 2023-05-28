@@ -21,14 +21,14 @@ public class Main2195 {
     static int solution(BufferedReader reader) throws IOException {
         String word = reader.readLine();
         String[] completeWord = reader.readLine().split("");
-        StringBuilder temp = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         int answer = 0;
         for (String s : completeWord) {
-            temp.append(s);
-            if (!word.contains(temp)) {
+            stringBuilder.append(s);
+            if (!word.contains(stringBuilder)) {
                 answer++;
-                temp = new StringBuilder();
-                temp.append(s);
+                stringBuilder.setLength(0);
+                stringBuilder.append(s);
             }
         }
         return answer + 1;
