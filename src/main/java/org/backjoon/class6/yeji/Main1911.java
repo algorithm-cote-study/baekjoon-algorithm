@@ -42,11 +42,9 @@ public class Main1911 {
                 range = puddle.start;
             }
 
-            if (puddle.end > range) {
-                while (puddle.end > range) {
-                    range += size;
-                    result++;
-                }
+            while (puddle.end > range) {
+                range += size;
+                result++;
             }
         }
 
