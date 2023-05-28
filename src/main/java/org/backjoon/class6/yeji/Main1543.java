@@ -22,10 +22,10 @@ public class Main1543 {
         String document = br.readLine();
         String searchWord = br.readLine();
 
-        int i = 0;
-        while (document.indexOf(searchWord, i) != -1) {
+        int startIndex = 0;
+        while (document.indexOf(searchWord, startIndex) != -1) {
             answer++;
-            i = (document.indexOf(searchWord, i) + searchWord.length());
+            startIndex = (document.indexOf(searchWord, startIndex) + searchWord.length());
         }
 
         return answer;
