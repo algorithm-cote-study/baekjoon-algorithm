@@ -1,6 +1,6 @@
 package org.backjoon.class6.seunggu;
 
-import static org.backjoon.class6.seunggu.Main2195.solution;
+import static org.backjoon.class6.seunggu.Main3109.solution;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.BufferedReader;

@@ -12,26 +12,31 @@ public class Main3109 {
 
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            StringTokenizer st = new StringTokenizer(reader.readLine());
-            int r = Integer.parseInt(st.nextToken());
-            int c = Integer.parseInt(st.nextToken());
-
-            String[][] pipeline = new String[r][c];
-            for(int i=0; i<r; i++) {
-                pipeline[i] = reader.readLine().split("");
-            }
-            int answer = 0;
-            for(int i=0; i<r; i++) {
-                pipeline[i][0] = "-";
-                if(check(i, 0, pipeline, r, c)) answer++;
-            }
+            int answer = solution(reader);
             System.out.println(answer);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    static boolean check(int x, int y, String[][] pipeline, int r, int c) {
+    static int solution(BufferedReader reader) throws IOException {
+        StringTokenizer st = new StringTokenizer(reader.readLine());
+        int r = Integer.parseInt(st.nextToken());
+        int c = Integer.parseInt(st.nextToken());
+
+        String[][] pipeline = new String[r][c];
+        for(int i=0; i<r; i++) {
+            pipeline[i] = reader.readLine().split("");
+        }
+        int answer = 0;
+        for(int i=0; i<r; i++) {
+            pipeline[i][0] = "-";
+            if(check(i, 0, pipeline, r, c)) answer++;
+        }
+        return answer;
+    }
+
+    private static boolean check(int x, int y, String[][] pipeline, int r, int c) {
 		pipeline[x][y] = "-";
         return isLast(y, c) || isRightUp(x, y, pipeline, r, c) || isRight(x, y, pipeline, r, c) || isRightDown(x, y, pipeline, r, c);
     }
