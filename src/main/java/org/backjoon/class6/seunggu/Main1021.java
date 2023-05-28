@@ -21,7 +21,6 @@ public class Main1021 {
     }
 
     static int solution(BufferedReader reader) throws IOException {
-        int answer = 0;
         LinkedList<Integer> deque = new LinkedList<>();
         int[] array = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         int n = array[0];
@@ -30,11 +29,11 @@ public class Main1021 {
         }
         array = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
-        answer = rotationQueue(answer, deque, array);
-        return answer;
+        return rotationQueue( deque, array);
     }
 
-    private static int rotationQueue(int answer, LinkedList<Integer> deque, int[] array) {
+    private static int rotationQueue( LinkedList<Integer> deque, int[] array) {
+        int answer = 0;
         for (int num : array) {
             int target = deque.indexOf(num);
             int half = deque.size() % 2 == 0 ? deque.size() / 2 - 1 : deque.size() / 2;
