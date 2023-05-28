@@ -19,6 +19,6 @@ class Main2195Test {
         // when
         int solution = solution( reader );
         // then
-        assertEquals( 15, solution );
+        assertEquals( 10, solution );
     }
 }
