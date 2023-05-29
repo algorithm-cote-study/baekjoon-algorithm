@@ -1,4 +1,4 @@
-package org.backjoon.class3.songju;
+package org.backjoon.class5.songju;
 
 import org.backjoon.common.TestFileUtil;
 import org.junit.jupiter.api.DisplayName;
