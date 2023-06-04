@@ -33,8 +33,10 @@ public class Main1922 {
         int result = 0;
         while(!queue.isEmpty()) {
             Edge edge = queue.poll();
-            if(find(edge.v1) != find(edge.v2)) {
-                union(edge.v1,edge.v2);
+            int parentV1 = find(edge.v1);
+            int parentV2 = find(edge.v2);
+            if(parentV1 != parentV2) {
+                union(parentV1, parentV2);
                 result += edge.cost;
             }
         }
@@ -55,13 +57,9 @@ public class Main1922 {
         }
     }
 
-    private static void union(int a, int b) {
-        int x = find(a);
-        int y = find(b);
-        if (x < y)
-            parent[y] = x;
-        else
-            parent[x] = y;
+    private static void union(int x, int y) {
+        if (x < y) parent[y] = x;
+        else parent[x] = y;
     }
 
     private static int find(int a) {
