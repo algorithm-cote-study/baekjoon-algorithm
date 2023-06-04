@@ -11,8 +11,8 @@ import java.util.Deque;
 public class Main14503 {
     private static int[][] room;
     private static int N, M;
-    private static int[] dx = {-1, 0, 1, 0}; //북, 동, 남, 서
-    private static int[] dy = {0, 1, 0, -1};
+    private final static int[] dx = {-1, 0, 1, 0}; //북, 동, 남, 서
+    private final static int[] dy = {0, 1, 0, -1};
     private static int cnt;
 
     public static void main(String[] args) {
