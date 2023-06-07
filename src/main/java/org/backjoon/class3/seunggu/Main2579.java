@@ -3,41 +3,47 @@ package org.backjoon.class3.seunggu;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.Deque;
 
-/**
- * 계단 오르기 ( 실버 3 )
- */
 public class Main2579 {
 
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             int count = Integer.parseInt(reader.readLine());
-            int n = 0;
-            Deque<Integer> deque = new ArrayDeque<>();
-            StringBuilder stringBuilder = new StringBuilder();
-            while (count > 0) {
-                int number = Integer.parseInt(reader.readLine());
-                if (number > n) {
-                    for (int i = n + 1; i <= number; i++) {
-                        deque.push(i);
-                        stringBuilder.append("+").append("\n");
-                    }
-                    n = number;
-                } else if (deque.peek() != number) {
-                    System.out.println("NO");
-                    return;
-                }
-                deque.pop();
-                stringBuilder.append("-").append("\n");
-                count--;
+            Stair[] stairs = new Stair[count];
+            for (int i = 0; i < count; i++) {
+                stairs[i] = Stair.of(Integer.parseInt(reader.readLine()));
+                if (i == count - 1) stairs[i].visited = true;
             }
-            System.out.println(stringBuilder);
+
+            for (int i = count - 3; i >= 0; i--) {
+                if (stairs[i - 1].visited && stairs[i - 2].visited) continue;
+                if (stairs[i].score + stairs[i - 1].score > stairs[i].score + stairs[i - 2].score) {
+
+                }
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
+    static class Stair {
+
+        private boolean visited;
+        private int score;
+
+        private int sum;
+
+        public Stair(int score) {
+            this.visited = false;
+            this.score = score;
+            this.sum = score;
+        }
+
+
+        public static Stair of(int score) {
+            return new Stair(score);
+        }
+
+    }
 
 }
