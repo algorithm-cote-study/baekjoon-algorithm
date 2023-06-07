@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Main3109 {
     private static String[][] board;
     private static boolean[][] visited;
-    private static int[] dx = {-1, 0, 1};
+    private static final int[] dx = {-1, 0, 1};
     private static int R, C, cnt;
     private static boolean isFinish;
 

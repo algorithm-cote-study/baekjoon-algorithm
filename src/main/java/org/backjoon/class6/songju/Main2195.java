@@ -21,9 +21,10 @@ public class Main2195 {
         int idx = 0;
         int cnt = 0;
         for (int i = 0; i < P.length(); i++) {
-            if (S.indexOf(P.substring(idx, i + 1)) != -1) continue;
-            idx = i;
-            cnt++;
+            if (S.indexOf(P.substring(idx, i + 1)) == -1) {
+                idx = i;
+                cnt++;
+            }
         }
         return cnt + 1;
     }
