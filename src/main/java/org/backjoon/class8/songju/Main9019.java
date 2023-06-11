@@ -68,7 +68,7 @@ public class Main9019 {
         private int num;
         private String cmd;
 
-        public Node(int num, String cmd) {
+        private Node(int num, String cmd) {
             this.num = num;
             this.cmd = cmd;
         }
