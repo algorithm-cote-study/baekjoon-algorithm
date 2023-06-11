@@ -24,13 +24,11 @@ public class Main10815 {
         StringBuilder result = new StringBuilder();
         N = Integer.parseInt(br.readLine());
         Set<Integer> hasCards = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).sorted().boxed().collect(Collectors.toSet());
-        //int [] hasCardArr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).sorted().toArray();
         int M = Integer.parseInt(br.readLine());
         int[] correctCards = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
         for(int num : correctCards)
             result.append(hasCards.contains(num) ? "1 " : "0 ");
-            //result.append(binarySearch(num) ? "1 " : "0 ");
 
         return result.toString();
     }
