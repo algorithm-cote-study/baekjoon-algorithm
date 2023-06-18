@@ -1,6 +1,6 @@
-package org.backjoon.class8.yeji;
+package org.backjoon.class9.yeji;
 
-import static org.backjoon.class8.yeji.Main1459.solution;
+import static org.backjoon.class9.yeji.Main1459.solution;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.BufferedReader;
@@ -16,7 +16,7 @@ class Main1459Test {
     @DisplayName("걷기 케이스1")
     void test_case_1() throws Exception {
         // given
-        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class8/1459/test_case1.txt");
+        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class9/1459/test_case1.txt");
         // when
         long solution = solution(reader);
         // then
@@ -27,7 +27,7 @@ class Main1459Test {
     @DisplayName("걷기 케이스2")
     void test_case_2() throws Exception {
         // given
-        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class8/1459/test_case2.txt");
+        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class9/1459/test_case2.txt");
         // when
         long solution = solution(reader);
         // then
@@ -38,7 +38,7 @@ class Main1459Test {
     @DisplayName("걷기 케이스3")
     void test_case_3() throws Exception {
         // given
-        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class8/1459/test_case3.txt");
+        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class9/1459/test_case3.txt");
         // when
         long solution = solution(reader);
         // then
@@ -49,7 +49,7 @@ class Main1459Test {
     @DisplayName("걷기 케이스4")
     void test_case_4() throws Exception {
         // given
-        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class8/1459/test_case4.txt");
+        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class9/1459/test_case4.txt");
         // when
         long solution = solution(reader);
         // then
@@ -60,7 +60,7 @@ class Main1459Test {
     @DisplayName("걷기 케이스5")
     void test_case_5() throws Exception {
         // given
-        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class8/1459/test_case5.txt");
+        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class9/1459/test_case5.txt");
         // when
         long solution = solution(reader);
         // then
@@ -71,7 +71,7 @@ class Main1459Test {
     @DisplayName("걷기 케이스6")
     void test_case_6() throws Exception {
         // given
-        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class8/1459/test_case6.txt");
+        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class9/1459/test_case6.txt");
         // when
         long solution = solution(reader);
         // then
@@ -82,7 +82,7 @@ class Main1459Test {
     @DisplayName("걷기 케이스7")
     void test_case_7() throws Exception {
         // given
-        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class8/1459/test_case7.txt");
+        BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class9/1459/test_case7.txt");
         // when
         long solution = solution(reader);
         // then
