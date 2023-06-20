@@ -70,16 +70,13 @@ public class Main11559 {
                 int cx = dx[d] + cur.x;
                 int cy = dy[d] + cur.y;
 
-                if (cx >= 0 && cx < 12 && cy >= 0 && cy < 6) {
-                    if (!visited[cx][cy] && map[cx][cy].equals(cur.color)) {
-                        queue.offer(Location.of(cx, cy, cur.color));
-                        samePuyoList.add(Location.of(cx, cy, cur.color));
-                        visited[cx][cy] = true;
-                    }
+                if (cx >= 0 && cx < 12 && cy >= 0 && cy < 6 && (!visited[cx][cy] && map[cx][cy].equals(cur.color))) {
+                    queue.offer(Location.of(cx, cy, cur.color));
+                    samePuyoList.add(Location.of(cx, cy, cur.color));
+                    visited[cx][cy] = true;
                 }
 
                 validPuyoPop(map, samePuyoList);
-
             }
         }
     }
@@ -114,18 +111,7 @@ public class Main11559 {
         }
     }
 
-    private static class Location {
-
-        private final int x;
-        private final int y;
-
-        private final String color;
-
-        private Location(int x, int y, String color) {
-            this.x = x;
-            this.y = y;
-            this.color = color;
-        }
+    private record Location(int x, int y, String color) {
 
         public static Location of(int x, int y, String color) {
             return new Location(x, y, color);
