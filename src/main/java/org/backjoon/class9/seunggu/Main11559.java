@@ -13,13 +13,13 @@ import java.util.Queue;
  */
 public class Main11559 {
 
-    static char[][] map = new char[12][6];
+    private static final char[][] map = new char[12][6];
 
-    static int pop = 0;
-    static boolean isPop = false;
+    private static int pop = 0;
+    private static boolean isPop = false;
 
-    static int[] dx = {0, 0, 1, -1};
-    static int[] dy = {1, -1, 0, 0};
+    private static final int[] dx = {0, 0, 1, -1};
+    private static final int[] dy = {1, -1, 0, 0};
 
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
@@ -138,6 +138,7 @@ public class Main11559 {
     }
 
     static class Puyo {
+
         private final int x;
         private final int y;
         char color;
