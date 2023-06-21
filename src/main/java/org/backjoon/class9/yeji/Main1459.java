@@ -23,20 +23,20 @@ public class Main1459 {
         long[] input = Arrays.stream(br.readLine().split(" ")).mapToLong(Long::parseLong).toArray();
         long case1 = (input[0] + input[1]) * input[2];
 
-        long case2 = (input[0] + input[1]) % 2 == 0 ? case1(input[0], input[1], input[3]) : case2(input[0], input[1], input[2], input[3]);
-        long case3 = case3(input[0], input[1], input[2], input[3]);
+        long case2 = (input[0] + input[1]) % 2 == 0 ? walkCase1(input[0], input[1], input[3]) : walkCase2(input[0], input[1], input[2], input[3]);
+        long case3 = walkCase3(input[0], input[1], input[2], input[3]);
         return Math.min(case1, Math.min(case2, case3));
     }
 
-    private static long case1(long x, long y, long s) {
+    private static long walkCase1(long x, long y, long s) {
         return Math.max(x, y) * s;
     }
 
-    private static long case2(long x, long y, long w, long s) {
+    private static long walkCase2(long x, long y, long w, long s) {
         return (Math.max(x, y) - 1) * s + w;
     }
 
-    private static long case3(long x, long y, long w, long s) {
+    private static long walkCase3(long x, long y, long w, long s) {
         return (Math.min(x, y)) * s + (Math.abs(x - y)) * w;
     }
 
