@@ -35,21 +35,21 @@ public class Main1987 {
         for (int i = 0; i < n; i++) {
             map[i] = reader.readLine().split("");
         }
-        Set<String> hashSet = new HashSet<>();
-        hashSet.add(map[0][0]);
-        dfs(0, 0, n, m, hashSet, 1);
+        Set<String> alphabetCollection = new HashSet<>();
+        alphabetCollection.add(map[0][0]);
+        dfs(0, 0, n, m, alphabetCollection, 1);
         return answer;
     }
 
-    private static void dfs(int x, int y, int n, int m, Set<String> hashSet, int count) {
+    private static void dfs(int x, int y, int n, int m, Set<String> alphabetCollection, int count) {
 
         for (int d = 0; d < dx.length; d++) {
             int cx = dx[d] + x;
             int cy = dy[d] + y;
-            if (cx >= 0 && cx < n && cy >= 0 && cy < m && !hashSet.contains(map[cx][cy])) {
-                hashSet.add(map[cx][cy]);
-                dfs(cx, cy, n, m, hashSet, count + 1);
-                hashSet.remove(map[cx][cy]);
+            if (cx >= 0 && cx < n && cy >= 0 && cy < m && !alphabetCollection.contains(map[cx][cy])) {
+                alphabetCollection.add(map[cx][cy]);
+                dfs(cx, cy, n, m, alphabetCollection, count + 1);
+                alphabetCollection.remove(map[cx][cy]);
             } else {
                 answer = Math.max(answer, count);
             }
