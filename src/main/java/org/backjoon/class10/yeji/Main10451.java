@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class Main10451 {
 
     private static int[] dp;
-    private static int answer = 0;
+    private static int count;
 
     public static void main(String[] args) {
         try {
@@ -24,20 +24,20 @@ public class Main10451 {
 
     static String solution(BufferedReader br) throws IOException {
         int testCases = Integer.parseInt(br.readLine());
-        StringBuilder answer = new StringBuilder();
+        StringBuilder totalCyclesCount = new StringBuilder();
 
         for (int i = 0; i < testCases; i++) {
             int permutationSize = Integer.parseInt(br.readLine());
             int[] permutationArray = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-            answer.append(countPermutationCycles(permutationSize, permutationArray)).append("\n");
+            totalCyclesCount.append(countPermutationCycles(permutationSize, permutationArray)).append("\n");
         }
 
-        return answer.toString();
+        return totalCyclesCount.toString();
     }
 
     private static int countPermutationCycles(int permutationSize, int[] permutationArray) {
         dp = new int[permutationSize + 1];
-        answer = 0;
+        count = 0;
         for (int i = 0; i < dp.length; i++) {
             dp[i] = i;
         }
@@ -45,7 +45,7 @@ public class Main10451 {
         for (int i = 1; i <= permutationSize; i++) {
             union(i, permutationArray[i - 1]);
         }
-        return answer;
+        return count;
     }
 
     private static void union(int a, int b) {
@@ -54,7 +54,7 @@ public class Main10451 {
         if (fa != fb) {
             dp[fa] = fb;
         } else {
-            answer++;
+            count++;
         }
     }
 
