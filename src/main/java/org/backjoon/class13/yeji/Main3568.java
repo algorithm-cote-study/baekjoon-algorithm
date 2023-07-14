@@ -11,16 +11,10 @@ public class Main3568 {
     static String solution(BufferedReader br) throws IOException {
         String[] iSharp = br.readLine().split(",");
         StringBuilder answer = new StringBuilder();
-        String start = "";
+        String start = iSharp[0].split(" ")[0];
         for (int i = 0; i < iSharp.length - 1; i++) {
-            if (i == 0) {
-                start = iSharp[i].split(" ")[0];
-            }
             String variable = iSharp[i].split(" ")[1];
             answer.append(start).append(findVariable(variable)).append(";").append("\n");
-        }
-        if (start.isEmpty()) {
-            start = iSharp[0].split(" ")[0];
         }
         answer.append(start).append(findVariable(iSharp[iSharp.length - 1].split(" ")[1].replace(";", ""))).append(";");
         return answer.toString();
@@ -51,7 +45,7 @@ public class Main3568 {
             end.append(stack.pop());
         }
 
-        return start.append(" ").toString() + end.reverse().toString();
+        return start.append(" ") + end.reverse().toString();
     }
 
     public static void main(String[] args) {
