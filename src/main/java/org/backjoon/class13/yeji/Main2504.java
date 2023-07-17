@@ -21,37 +21,33 @@ public class Main2504 {
 
     static int solution(BufferedReader reader) throws IOException {
         String input = reader.readLine();
-
-        int mul = 1;
         int result = 0;
-        Deque<Character> stack = new ArrayDeque<>();
-        for (int i = 0; i < input.length(); i++) {
-            switch (input.charAt(i)) {
-                case '(' -> {
-                    stack.push('(');
-                    mul *= 2;
+        String arr[] = input.split("");
+        if (arr.length % 2 == 1) return result;
+
+        Deque<String> stack = new ArrayDeque<>();
+        int tmp = 1;
+        for (int i = 0; i < arr.length; i++) {
+            switch (arr[i]) {
+                case "(" -> {
+                    tmp *= 2;
+                    stack.push(arr[i]);
                 }
-                case '[' -> {
-                    stack.push('[');
-                    mul *= 3;
+                case "[" -> {
+                    tmp *= 3;
+                    stack.push(arr[i]);
                 }
-                case ')' -> {
-                    if (stack.isEmpty() || stack.peek() != '(') {
-                        result = 0;
-                        break;
-                    }
-                    if (input.charAt(i - 1) == '(') result += mul;
+                case ")" -> {
+                    if (stack.isEmpty() || !stack.peek().equals("(")) return 0;
+                    if (arr[i - 1].equals("(")) result += tmp;
                     stack.pop();
-                    mul /= 2;
+                    tmp /= 2;
                 }
-                case ']' -> {
-                    if (stack.isEmpty() || stack.peek() != '[') {
-                        result = 0;
-                        break;
-                    }
-                    if (input.charAt(i - 1) == '[') result += mul;
+                case "]" -> {
+                    if (stack.isEmpty() || !stack.peek().equals("[")) return 0;
+                    if (arr[i - 1].equals("[")) result += tmp;
                     stack.pop();
-                    mul /= 3;
+                    tmp /= 3;
                 }
             }
         }
