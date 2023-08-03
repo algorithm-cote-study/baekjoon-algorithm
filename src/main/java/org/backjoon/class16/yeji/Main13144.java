@@ -10,7 +10,6 @@ import java.util.StringTokenizer;
  */
 public class Main13144 {
 
-
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             System.out.print(solution(reader));
