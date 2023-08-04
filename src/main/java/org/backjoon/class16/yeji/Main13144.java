@@ -3,7 +3,7 @@ package org.backjoon.class16.yeji;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.StringTokenizer;
 
 /**
  * List of Unique Numbers
@@ -19,27 +19,27 @@ public class Main13144 {
         }
     }
 
-    static int solution(BufferedReader reader) throws IOException {
+    static long solution(BufferedReader reader) throws IOException {
         int n = Integer.parseInt(reader.readLine());
-        int[] input = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int count = 0;
-
-        for (int i = 0; i < n; i++) {
-            int j = i + 1;
-            count++;
-            int[] location = new int[100001];
-            location[input[i]] = 1;
-            while (j < n) {
-                if (location[input[j]] == 1) {
-                    break;
-                }
-                location[input[j]] = 1;
-                count++;
-                j++;
-            }
-
+        int[] arr = new int[n + 1];
+        StringTokenizer st = new StringTokenizer(reader.readLine());
+        for (int i = 1; i <= n; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        return count;
+        int l = 1;
+        int r = 0;
+        long answer = 0;
+        int[] ct = new int[100_001];
+        while (l <= n) {
+            while (r + 1 <= n && ct[arr[r + 1]] == 0) {
+                r++;
+                ct[arr[r]]++;
+            }
+
+            answer += r - l + 1;
+            ct[arr[l++]]--;
+        }
+        return answer;
     }
 }

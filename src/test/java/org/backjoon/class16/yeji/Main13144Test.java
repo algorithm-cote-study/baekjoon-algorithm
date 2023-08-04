@@ -18,7 +18,7 @@ class Main13144Test {
         // given
         BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class16/13144/test_case1.txt");
         // when
-        int solution = solution(reader);
+        long solution = solution(reader);
         // then
         assertEquals(15, solution);
     }
@@ -29,7 +29,7 @@ class Main13144Test {
         // given
         BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class16/13144/test_case2.txt");
         // when
-        int solution = solution(reader);
+        long solution = solution(reader);
         // then
         assertEquals(12, solution);
     }
@@ -40,7 +40,7 @@ class Main13144Test {
         // given
         BufferedReader reader = TestFileUtil.getReader(this.getClass(), "testcase/class16/13144/test_case3.txt");
         // when
-        int solution = solution(reader);
+        long solution = solution(reader);
         // then
         assertEquals(5, solution);
     }
