@@ -90,6 +90,7 @@ class Main1018Test {
 
 ## <img src="https://img.icons8.com/color/48/null/light.png" width="30" height="30" style="padding: 0;margin-bottom:-5px;"/>  변경이력
 
+- [📢 패키지 명 변경](https://github.com/algorithm-cote-study/baekjoon-algorithm/issues/46) - 2023.08.09
 - [📢 코드 merge 관련의 건](https://github.com/algorithm-cote-study/baekjoon-algorithm/issues/10) -
   2023.05.07
 - [📢 알고리즘 문제 선정 방식 변경](https://github.com/algorithm-cote-study/baekjoon-algorithm/issues/11) -
