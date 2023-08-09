@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Main2644 {
 
-    private static List<List<Relation>> graph;
+    private static List<List<Integer>> graph;
     private static boolean[] visited;
 
     public static void main(String[] args) {
@@ -38,8 +38,8 @@ public class Main2644 {
 
         for (int i = 0; i < relationCount; i++) {
             int[] relation = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-            graph.get(relation[0]).add(Relation.from(relation[1], 1));
-            graph.get(relation[1]).add(Relation.from(relation[0], 2));
+            graph.get(relation[0]).add(relation[1]);
+            graph.get(relation[1]).add(relation[0]);
         }
 
         return findRelationDepth(target);
@@ -54,11 +54,11 @@ public class Main2644 {
             if (current.node == target[1]) {
                 return current.depth;
             }
-            List<Relation> relations = graph.get(current.node);
-            for (Relation relation : relations) {
-                if (!visited[relation.node]) {
-                    visited[relation.node] = true;
-                    queue.offer(Relation.from(relation.node, current.depth + 1));
+            List<Integer> relations = graph.get(current.node);
+            for (Integer relation : relations) {
+                if (!visited[relation]) {
+                    visited[relation] = true;
+                    queue.offer(Relation.from(relation, current.depth + 1));
                 }
             }
         }
