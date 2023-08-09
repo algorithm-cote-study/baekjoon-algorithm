@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
 public class Main17220 {
 
     private static boolean[] visited;
-    private static int[] findRoot;
+
     private static List<List<Integer>> graph;
     private static int answer;
 
@@ -31,7 +31,8 @@ public class Main17220 {
         answer = 0;
         graph = new ArrayList<>();
         visited = new boolean[numeric[0] + 1];
-        findRoot = new int[numeric[0] + 1];
+        int[] findRoot = new int[numeric[0] + 1];
+
         for (int i = 0; i <= numeric[0]; i++) {
             graph.add(new ArrayList<>());
         }
@@ -40,6 +41,7 @@ public class Main17220 {
             graph.get(relation[0] - 64).add(relation[1] - 64);
             findRoot[relation[1] - 64]++;
         }
+
         StringTokenizer stringTokenizer = new StringTokenizer(reader.readLine());
         int n = Integer.parseInt(stringTokenizer.nextToken());
 
