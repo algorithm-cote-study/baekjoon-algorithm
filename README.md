@@ -95,6 +95,7 @@ class Main1018Test {
   2023.05.07
 - [📢 알고리즘 문제 선정 방식 변경](https://github.com/algorithm-cote-study/baekjoon-algorithm/issues/11) -
   2023.05.08
+- [📢 백준 알고리즘 풀이 일시중단](https://github.com/algorithm-cote-study/baekjoon-algorithm/issues/50) - 2023.08.14
 
 ## Contributors
 
